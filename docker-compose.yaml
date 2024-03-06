@@ -1,0 +1,17 @@
+version: '3'
+services:
+  node-server:
+    build:
+      context: ./server  # Replace with the actual path to your Node.js server
+    ports:
+      - "3001:3001"
+    volumes:
+      - ./server:/usr/src/app  # Replace with the actual path to your Node.js server
+
+  react-client:
+    build:
+      context: ./client  # Replace with the actual path to your React client
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./client:/usr/src/app  # Replace with the actual path to your React client
